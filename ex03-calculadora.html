@@ -23,10 +23,32 @@
             Efetue o cálculo apropriado de acordo com o operador informado
             e informe o resultado usando document.write().
         */
-       let num1 = parseFloat(prompt('Mensagem'))
-       let num2 = parseFloat(prompt('Mensagem'))
-       let oper = prompt('Mensagem')
+       let num1 = parseFloat(prompt('Digite um número:'))
+       let num2 = parseFloat(prompt('Digite outro número:'))
+       let oper = prompt('Digite um tipo de operação:')
 
+       //Caso os dados inseridos sejam inválidos
+       if(inNaN(num1) || isNaN(num2)){
+           alert('Erro: Os dados inseridos não correspodem a números válidos.')
+       }
+       else if(oper === '+') {
+           document.write(`${num1} + ${num2} é igual a ${num1 + num2}`)
+         }
+         else if(oper === '-') {
+             document.write(`${num1} - ${num2} é igual a ${num1 - num2}`)
+             }
+             else if(oper === '*' || oper === 'X' || oper === 'x'){
+                 document.write(`${num1} * ${num2} é igual a ${num1 * num2}`)
+             }
+             else if(oper === '/' || oper === ':'){
+                 document.write(`${num1} / ${num2} é igual a ${num1 / num2}`)
+             }
+             else {
+                 alert('Erro: o operador inserido não é válido.')
+             }
+
+
+    
     </script>
 </head>
 <body>
